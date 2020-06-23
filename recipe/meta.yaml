@@ -2,17 +2,17 @@
 {% set version = "2.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: 9c508bfd453f6e9af96fb23eb660807e95ad4bfa20cdfee451d857601f465d39
+  sha256: 8983847efb1cf5c0d491a268ba207ef844dde93caad5871afa882788b1e2ebe3
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,7 +29,7 @@ requirements:
     - python
     - scipy
     - seaborn
-    - sklearn
+    - scikit-learn
 
 test:
   imports:
@@ -38,13 +38,13 @@ test:
     - floris.tools
 
 about:
-  home: "https://github.com/NREL/FLORIS"
+  home: https://github.com/NREL/FLORIS
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
-  summary: "A controls-oriented engineering wake model."
-  doc_url: "https://floris.readthedocs.io"
-  dev_url: "https://github.com/NREL/FLORIS"
+  summary: A controls-oriented engineering wake model.
+  doc_url: https://floris.readthedocs.io
+  dev_url: https://github.com/NREL/FLORIS
 
 extra:
   recipe-maintainers:
