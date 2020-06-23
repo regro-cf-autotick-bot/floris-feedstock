@@ -1,5 +1,5 @@
 {% set name = "FLORIS" %}
-{% set version = "1.1.7" %}
+{% set version = "2.1.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: 982ffe5d091cd1af7e100935acfb6305f799b99936af3f10f4f9763c1186a0b5
+  sha256: 9c508bfd453f6e9af96fb23eb660807e95ad4bfa20cdfee451d857601f465d39
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
@@ -20,7 +20,7 @@ requirements:
     - pip
 
   run:
-    - h5py
+    - coloredlogs
     - matplotlib-base
     - numpy
     - pandas
@@ -29,6 +29,7 @@ requirements:
     - python
     - scipy
     - seaborn
+    - sklearn
 
 test:
   imports:
