@@ -30,6 +30,7 @@ requirements:
     - scipy
     - seaborn
     - scikit-learn
+    - shapely
 
 test:
   imports:
