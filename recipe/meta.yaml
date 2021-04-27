@@ -1,5 +1,5 @@
 {% set name = "FLORIS" %}
-{% set version = "2.2.5" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: 83423c0d79efbe4a4525532840434a83a5b944fdbacc9217ffad4f1ff8a7624a
+  sha256: 404cb643a2e4654c4500a78b30a84fc3022c20dacd8c958b4479fd2e4742b0e1
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
