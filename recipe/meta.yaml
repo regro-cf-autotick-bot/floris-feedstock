@@ -1,5 +1,5 @@
 {% set name = "FLORIS" %}
-{% set version = "2.2.5" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: 83423c0d79efbe4a4525532840434a83a5b944fdbacc9217ffad4f1ff8a7624a
+  sha256: 961637311cbbd157af9b51370b5907dd2b9157b4c7d749faf6d196a4ea7b503e
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
@@ -30,6 +30,7 @@ requirements:
     - scipy
     - seaborn
     - scikit-learn
+    - shapely
 
 test:
   imports:
